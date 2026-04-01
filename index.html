@@ -30,28 +30,17 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+  .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
 
-  /* ─── TOP UTILITY BAR (Translate, Links, Search) ─── */
+  /* ─── TOP UTILITY BAR ─── */
   .top-bar {
     background: var(--brand-white);
     border-bottom: 1px solid var(--brand-gray-border);
     font-size: 12px;
     font-weight: 500;
   }
-  .top-bar .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .top-bar-links {
-    display: flex;
-    align-items: center;
-  }
+  .top-bar .container { display: flex; justify-content: flex-end; align-items: center; }
+  .top-bar-links { display: flex; align-items: center; }
   .top-bar-links a {
     color: var(--brand-text);
     text-decoration: none;
@@ -72,152 +61,69 @@
     border-right: 1px solid var(--brand-gray-border);
   }
 
-  .social-search-bar {
-    display: flex;
-    align-items: center;
-    background: #aab2bd;
-    height: 100%;
-  }
-  .social-icons {
-    display: flex;
-    height: 100%;
-  }
+  .social-search-bar { display: flex; align-items: center; background: #aab2bd; height: 100%; }
+  .social-icons { display: flex; height: 100%; }
   .social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     width: 40px; height: 100%;
     color: var(--brand-white);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: bold; font-size: 16px;
   }
   .social-fb { background: #3b5998; }
   .social-tw { background: #55acee; }
   .social-ig { background: #e1306c; }
 
-  .header-search {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
+  .header-search { display: flex; align-items: center; height: 100%; }
   .header-search input {
-    border: none;
-    background: #aab2bd;
-    color: var(--brand-navy);
-    padding: 12px 16px;
-    font-size: 14px;
-    outline: none;
-    width: 250px;
+    border: none; background: #aab2bd; color: var(--brand-navy);
+    padding: 12px 16px; font-size: 14px; outline: none; width: 250px;
   }
   .header-search input::placeholder { color: var(--brand-navy); opacity: 0.7; }
   .header-search button {
-    background: transparent;
-    border: none;
-    padding: 0 16px;
-    cursor: pointer;
-    font-size: 16px;
-    color: var(--brand-navy);
+    background: transparent; border: none; padding: 0 16px;
+    cursor: pointer; font-size: 16px; color: var(--brand-navy);
   }
 
   /* ─── MAIN HEADER & MEGA MENU ─── */
   .main-header {
     background: var(--brand-white);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
-  .main-header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 90px;
-  }
+  .main-header-inner { display: flex; justify-content: space-between; align-items: flex-end; height: 90px; }
   
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    padding-bottom: 15px;
-  }
-  .logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 900;
-    color: var(--brand-navy);
-    line-height: 1;
-  }
-  .logo-sub {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--brand-text-muted);
-    text-transform: uppercase;
-  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; padding-bottom: 15px; cursor: pointer;}
+  .logo-text { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: var(--brand-navy); line-height: 1; }
+  .logo-sub { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: var(--brand-text-muted); text-transform: uppercase; }
   
   .main-nav { display: flex; height: 100%; }
   .nav-item { position: relative; display: flex; align-items: center; }
   .nav-link {
-    text-decoration: none;
-    color: var(--brand-navy);
-    font-weight: 700;
-    font-size: 14px;
-    padding: 0 16px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: 4px solid transparent;
-    transition: all 0.2s;
+    text-decoration: none; color: var(--brand-navy); font-weight: 700; font-size: 14px;
+    padding: 0 16px; height: 100%; display: flex; align-items: center;
+    border-bottom: 4px solid transparent; transition: all 0.2s; cursor: pointer;
   }
   .nav-link span { font-weight: 400; color: var(--brand-text-muted); margin-right: 4px; font-size: 12px;}
-  .nav-item:hover .nav-link, .nav-link.active {
-    color: var(--brand-gold);
-    border-bottom: 4px solid var(--brand-gold);
-  }
+  .nav-item:hover .nav-link, .nav-link.active { color: var(--brand-gold); border-bottom: 4px solid var(--brand-gold); }
 
-  /* Mega Menu Container */
   .mega-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    background: var(--brand-navy);
-    color: var(--brand-white);
-    padding: 40px 0 60px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.2s ease-in-out;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    position: absolute; top: 100%; left: 0; width: 100vw; margin-left: calc(-50vw + 50%);
+    background: var(--brand-navy); color: var(--brand-white);
+    padding: 40px 0 60px; visibility: hidden; opacity: 0; transform: translateY(10px);
+    transition: all 0.2s ease-in-out; border-top: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   }
-  .nav-item:hover .mega-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .nav-item:hover .mega-menu { visibility: visible; opacity: 1; transform: translateY(0); }
   
-  .mega-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
+  .mega-grid { display: flex; justify-content: space-between; gap: 40px; }
   .mega-col { flex: 1; border-right: 1px solid rgba(255,255,255,0.15); padding-right: 20px; }
   .mega-col:last-child { border-right: none; padding-right: 0; }
   
   .mega-heading {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    margin-top: 16px;
-    color: var(--brand-white);
-    display: block;
-    text-decoration: none;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
+    text-transform: uppercase; margin-bottom: 12px; margin-top: 16px;
+    color: var(--brand-white); display: block; text-decoration: none; cursor: pointer;
   }
   .mega-heading:first-child { margin-top: 0; }
   .mega-heading:hover { color: var(--brand-gold); }
@@ -225,207 +131,76 @@
   .mega-list { list-style: none; margin-bottom: 16px; margin-left: 12px; }
   .mega-list li { margin-bottom: 6px; }
   .mega-list a {
-    color: var(--brand-white);
-    text-decoration: none;
-    font-size: 12px;
-    transition: color 0.15s;
-    display: block;
-    line-height: 1.4;
+    color: var(--brand-white); text-decoration: none; font-size: 12px;
+    transition: color 0.15s; display: block; line-height: 1.4; cursor: pointer;
   }
   .mega-list a:hover { text-decoration: underline; color: var(--brand-gold); }
 
-  /* ─── PAGE UTILITIES (Font Size, Share, Print) ─── */
+  /* ─── PAGE UTILITIES ─── */
   .page-utilities {
-    background: var(--brand-white);
-    border-bottom: 1px solid var(--brand-gray-border);
-    padding: 10px 0;
-    font-size: 12px;
-    color: var(--brand-text-muted);
+    background: var(--brand-white); border-bottom: 1px solid var(--brand-gray-border);
+    padding: 10px 0; font-size: 12px; color: var(--brand-text-muted);
   }
-  .page-utilities .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  .page-utilities .container { display: flex; justify-content: space-between; align-items: center; }
   .utility-group { display: flex; align-items: center; gap: 16px; }
   .utility-btn {
-    background: none;
-    border: none;
-    color: var(--brand-navy);
-    cursor: pointer;
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
+    background: none; border: none; color: var(--brand-navy); cursor: pointer;
+    font-size: 12px; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 6px; text-decoration: none;
   }
   .utility-btn:hover { text-decoration: underline; }
-  .font-size-controls button {
-    background: var(--brand-gray-light);
-    border: 1px solid var(--brand-gray-border);
-    padding: 2px 6px;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--brand-navy);
-  }
 
   /* ─── PAGE LAYOUT & SIDEBAR ─── */
-  .page-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 40px;
-    padding: 40px 0 80px;
-  }
+  .page-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 40px 0 80px; }
 
-  .sidebar {
-    background: var(--brand-navy);
-    border-radius: 4px;
-    padding: 0;
-    height: fit-content;
-    overflow: hidden;
-  }
+  .sidebar { background: var(--brand-navy); border-radius: 4px; padding: 0; height: fit-content; overflow: hidden; }
   .sidebar-header {
-    background: var(--brand-gold);
-    color: var(--brand-navy);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 16px 20px;
+    background: var(--brand-gold); color: var(--brand-navy); font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 700; text-transform: uppercase; padding: 16px 20px;
   }
   .sidebar-menu { list-style: none; }
   .sidebar-menu li { border-bottom: 1px solid rgba(255,255,255,0.1); }
   .sidebar-menu li:last-child { border-bottom: none; }
   .sidebar-menu a {
-    display: block;
-    padding: 14px 20px;
-    color: var(--brand-white);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: background 0.2s;
+    display: block; padding: 14px 20px; color: var(--brand-white); text-decoration: none;
+    font-size: 13px; font-weight: 500; transition: background 0.2s; cursor: pointer;
   }
-  .sidebar-menu a:hover, .sidebar-menu a.active {
-    background: rgba(255,255,255,0.1);
-    color: var(--brand-gold);
-  }
-
-  /* Sub-menu for "I Want To..." in sidebar */
-  .sidebar-sub-menu {
-    list-style: none;
-    background: #001f3b;
-    padding: 10px 0;
-  }
-  .sidebar-sub-menu a {
-    padding: 8px 20px 8px 30px;
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.8);
-  }
-  .sidebar-sub-menu a:before { content: '› '; color: var(--brand-gold); margin-right: 5px; }
+  .sidebar-menu a:hover, .sidebar-menu a.active { background: rgba(255,255,255,0.1); color: var(--brand-gold); }
 
   /* ─── MAIN CONTENT ─── */
-  .main-content {
-    background: var(--brand-white);
-    padding: 40px;
-    border: 1px solid var(--brand-gray-border);
-    border-radius: 4px;
-  }
+  .main-content { background: var(--brand-white); padding: 40px; border: 1px solid var(--brand-gray-border); border-radius: 4px; }
   .page-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: var(--brand-navy);
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--brand-gray-border);
+    font-family: 'Playfair Display', serif; font-size: 36px; color: var(--brand-navy);
+    margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--brand-gray-border);
   }
-  .content-intro {
-    font-size: 15px;
-    margin-bottom: 32px;
-    color: var(--brand-text);
-  }
+  .content-intro { font-size: 15px; margin-bottom: 32px; color: var(--brand-text); }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
-  }
+  /* Shared UI Elements for swapped content */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
   .service-card {
-    background: var(--brand-gray-light);
-    border: 1px solid var(--brand-gray-border);
-    border-radius: 4px;
-    padding: 24px;
-    text-decoration: none;
-    color: var(--brand-text);
-    transition: all 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background: var(--brand-gray-light); border: 1px solid var(--brand-gray-border); border-radius: 4px;
+    padding: 24px; text-decoration: none; color: var(--brand-text); transition: all 0.2s;
+    display: flex; flex-direction: column; align-items: flex-start; cursor: pointer;
   }
   .service-card:hover {
-    background: var(--brand-white);
-    border-color: var(--brand-navy);
-    box-shadow: 0 4px 12px rgba(0,45,86,0.1);
-    transform: translateY(-2px);
+    background: var(--brand-white); border-color: var(--brand-navy);
+    box-shadow: 0 4px 12px rgba(0,45,86,0.1); transform: translateY(-2px);
   }
-  .service-card h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--brand-navy);
-    margin-bottom: 8px;
-  }
-  .service-card p {
-    font-size: 13px;
-    color: var(--brand-text-muted);
-    line-height: 1.5;
-  }
+  .service-card h3 { font-size: 15px; font-weight: 700; color: var(--brand-navy); margin-bottom: 8px; }
+  .service-card p { font-size: 13px; color: var(--brand-text-muted); line-height: 1.5; }
+
+  .content-block { margin-bottom: 30px; }
+  .content-block h2 { font-family: 'Playfair Display', serif; color: var(--brand-navy); margin-bottom: 15px; font-size: 24px;}
+  .contact-box { background: var(--brand-light-blue); padding: 20px; border-left: 4px solid var(--brand-navy); margin-bottom: 20px;}
 
   /* ─── FOOTER ─── */
-  .site-footer {
-    background: var(--brand-navy);
-    color: var(--brand-white);
-    padding: 60px 0 40px;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 40px;
-  }
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    color: var(--brand-white);
-  }
-  .footer-col h4 {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 16px;
-    color: var(--brand-gold);
-  }
+  .site-footer { background: var(--brand-navy); color: var(--brand-white); padding: 60px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 900; margin-bottom: 12px; color: var(--brand-white); }
+  .footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--brand-gold); }
   .footer-col ul { list-style: none; }
-  .footer-col a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    font-size: 13px;
-    display: block;
-    margin-bottom: 8px;
-    transition: color 0.2s;
-  }
+  .footer-col a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; display: block; margin-bottom: 8px; transition: color 0.2s; cursor: pointer;}
   .footer-col a:hover { color: var(--brand-white); text-decoration: underline; }
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    color: rgba(255,255,255,0.6);
-  }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: rgba(255,255,255,0.6); }
 
   @media (max-width: 1024px) {
     .page-layout { grid-template-columns: 1fr; }
@@ -438,22 +213,20 @@
 <div class="top-bar">
   <div class="container" style="padding: 0 24px;">
     <div class="top-bar-links">
-      <a href="https://www.colleyville.com/quick-links">Quick Links</a>
-      <a href="https://www.colleyville.com/stay-in-touch">Stay in Touch</a>
-      <a href="https://www.colleyville.com/government/departments-a-l/human-resources/job-opportunities">Jobs</a>
-      <a href="https://www.colleyville.com/colleyville/contact-us">Contact Us</a>
+      <a href="#">Quick Links</a>
+      <a href="#">Stay in Touch</a>
+      <a href="#">Jobs</a>
+      <a href="#">Contact Us</a>
     </div>
-    
     <select class="translate-select">
       <option>Translate</option>
       <option>Español</option>
     </select>
-
     <div class="social-search-bar">
       <div class="social-icons">
-        <a href="https://www.facebook.com/ColleyvilleCity" class="social-fb" target="_blank">f</a>
-        <a href="https://twitter.com/colleyvillecity" class="social-tw" target="_blank">t</a>
-        <a href="https://www.instagram.com/cityofcolleyville/" class="social-ig" target="_blank">ig</a>
+        <a href="#" class="social-fb">f</a>
+        <a href="#" class="social-tw">t</a>
+        <a href="#" class="social-ig">ig</a>
       </div>
       <div class="header-search">
         <input type="text" placeholder="Search">
@@ -465,8 +238,7 @@
 
 <header class="main-header">
   <div class="container main-header-inner">
-    
-    <a href="https://www.colleyville.com/" class="logo">
+    <a class="logo" onclick="loadPage('home')">
       <div>
         <div class="logo-text">COLLEYVILLE</div>
         <div class="logo-sub">Texas</div>
@@ -474,205 +246,49 @@
     </a>
     
     <nav class="main-nav">
+      <div class="nav-item">
+        <a class="nav-link active" onclick="loadPage('services')"><span>FOR</span> SERVICES</a>
+        <div class="mega-menu">
+          <div class="container mega-grid">
+            <div class="mega-col">
+              <a class="mega-heading" onclick="loadPage('generic', 'I Want To...')">I WANT TO...</a>
+              <ul class="mega-list">
+                <li><a onclick="loadPage('generic', 'Access Public Documents')">Access Public Documents</a></li>
+                <li><a onclick="loadPage('generic', 'Activate New Water Service')">Activate new water service</a></li>
+                <li><a onclick="loadPage('generic', 'Apply for Building Permit')">Apply for Building Permit</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <a class="mega-heading" onclick="loadPage('animal-services')">ANIMAL SERVICES</a>
+              <a class="mega-heading" onclick="loadPage('garbage-recycling')">GARBAGE COLLECTION & RECYCLING</a>
+              <a class="mega-heading" onclick="loadPage('generic', 'New Water Service')">NEW WATER SERVICE</a>
+              <a class="mega-heading" onclick="loadPage('generic', 'Public Safety')">PUBLIC SAFETY</a>
+            </div>
+            <div class="mega-col">
+              <a class="mega-heading" onclick="loadPage('generic', 'Utilities & Services')">UTILITIES & SERVICES</a>
+            </div>
+            <div class="mega-col">
+              <a class="mega-heading" onclick="loadPage('generic', 'Colleyville Center')">COLLEYVILLE CENTER</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" onclick="loadPage('generic', 'Residents Hub')"><span>FOR</span> RESIDENTS</a>
+        <div class="mega-menu">
+          <div class="container mega-grid">
+            <div class="mega-col">
+              <a class="mega-heading" onclick="loadPage('generic', 'HOA Info')">HOMEOWNERS ASSOCIATIONS</a>
+              <a class="mega-heading" onclick="loadPage('generic', 'Online Bill Payment')">ONLINE BILL PAYMENT</a>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <div class="nav-item">
-        <a href="https://www.colleyville.com/services" class="nav-link active"><span>FOR</span> SERVICES</a>
-        <div class="mega-menu">
-          <div class="container mega-grid">
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/services/i-want-to" class="mega-heading">I WANT TO...</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/services/i-want-to/access-public-documents">Access Public Documents</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/activate-new-water-service">Activate new water service</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/apply-for-building-permit">Apply for Building Permit</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/make-a-payment">Make a payment</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/make-a-citizen-request">Make a citizen request</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/report-fraud-waste-abuse">Report Fraud, Waste & Abuse</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-enews">Sign Up for eNews</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-codered-emergency-notification">Sign up for CodeRED emergency notification</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-no-knock-list">Sign up for No Knock List</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/watch-public-meetings">Watch Public Meetings</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/water-irrigation-system-evaluation">Water Irrigation System Evaluation</a></li>
-                <li><a href="https://www.colleyville.com/services/i-want-to/view-city-map">View City Map</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/services/animal-services" class="mega-heading">ANIMAL SERVICES</a>
-              <a href="https://www.colleyville.com/services/garbage-collection-recycling" class="mega-heading">GARBAGE COLLECTION & RECYCLING</a>
-              <a href="https://www.colleyville.com/services/new-water-service" class="mega-heading">NEW WATER SERVICE</a>
-              <a href="https://www.colleyville.com/services/public-safety" class="mega-heading">PUBLIC SAFETY</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/services/utilities-services" class="mega-heading">UTILITIES & SERVICES</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/services/colleyville-center" class="mega-heading">COLLEYVILLE CENTER</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <a href="https://www.colleyville.com/residents" class="nav-link"><span>FOR</span> RESIDENTS</a>
-        <div class="mega-menu">
-          <div class="container mega-grid">
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/residents/americans-with-disabilities-act" class="mega-heading">AMERICANS WITH DISABILITIES ACT</a>
-              <a href="https://www.colleyville.com/residents/call-on-colleyville-citizen-request" class="mega-heading">CALL ON COLLEYVILLE CITIZEN REQUEST</a>
-              <a href="https://www.colleyville.com/residents/codered-emergency-notification" class="mega-heading">CODERED EMERGENCY NOTIFICATION</a>
-              <a href="https://www.colleyville.com/residents/colleyville-center" class="mega-heading">COLLEYVILLE CENTER</a>
-              <a href="https://www.colleyville.com/residents/community-groups" class="mega-heading">COMMUNITY GROUPS</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/residents/community-groups/non-profit-event-calendar">Non-Profit Event Calendar</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/residents/garage-sale-information" class="mega-heading">GARAGE SALE INFORMATION</a>
-              <a href="https://www.colleyville.com/residents/mosquito-control-and-management" class="mega-heading">MOSQUITO CONTROL AND MANAGEMENT</a>
-              <a href="https://www.colleyville.com/residents/garbage-collection-recycling" class="mega-heading">GARBAGE COLLECTION & RECYCLING</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/residents/garbage-collection-recycling/recycling-program">Recycling Program</a></li>
-                <li><a href="https://www.colleyville.com/residents/garbage-collection-recycling/colleyville-clean-sweep">Colleyville Clean Sweep</a></li>
-                <li><a href="https://www.colleyville.com/residents/garbage-collection-recycling/household-hazardous-waste">Household Hazardous Waste</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/residents/homeowners-associations" class="mega-heading">HOMEOWNERS ASSOCIATIONS</a>
-              <a href="https://www.colleyville.com/residents/online-bill-payment" class="mega-heading">ONLINE BILL PAYMENT</a>
-              <a href="https://www.colleyville.com/residents/special-events" class="mega-heading">SPECIAL EVENTS</a>
-              <a href="https://www.colleyville.com/residents/utilities-services" class="mega-heading">UTILITIES & SERVICES</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/residents/utilities-services/new-water-service">New Water Service</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/residents/solicitation-permits" class="mega-heading">SOLICITATION PERMITS</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/residents/solicitation-permits/residential-sign-requirements">Residential Sign Requirements</a></li>
-                <li><a href="https://www.colleyville.com/residents/solicitation-permits/address-registry">Address Registry</a></li>
-              </ul>
-              <a href="https://www.colleyville.com/residents/staff-directory" class="mega-heading">STAFF DIRECTORY</a>
-              <a href="https://www.colleyville.com/residents/restaurant-roadmap" class="mega-heading">RESTAURANT ROADMAP</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <a href="https://www.colleyville.com/business" class="nav-link"><span>FOR</span> BUSINESS</a>
-        <div class="mega-menu">
-          <div class="container mega-grid">
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/business/building-inspection" class="mega-heading">BUILDING INSPECTION</a>
-              <a href="https://www.colleyville.com/business/colleyville-business-center" class="mega-heading">COLLEYVILLE BUSINESS CENTER</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/business/community-business-guide" class="mega-heading">COMMUNITY BUSINESS GUIDE</a>
-              <a href="https://www.colleyville.com/business/economic-development" class="mega-heading">ECONOMIC DEVELOPMENT</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/business/colleyville-center" class="mega-heading">COLLEYVILLE CENTER</a>
-              <a href="https://www.colleyville.com/business/community-development" class="mega-heading">COMMUNITY DEVELOPMENT</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/business/online-gis-mapping" class="mega-heading">ONLINE GIS MAPPING</a>
-              <a href="https://www.colleyville.com/business/property-search" class="mega-heading">PROPERTY SEARCH</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <a href="https://www.colleyville.com/government" class="nav-link"><span>FOR</span> GOVERNMENT</a>
-        <div class="mega-menu">
-          <div class="container mega-grid">
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/government/bid-opportunities" class="mega-heading">BID OPPORTUNITIES</a>
-              <a href="https://www.colleyville.com/government/boards-commissions-committees" class="mega-heading">BOARDS, COMMISSIONS & COMMITTEES</a>
-              <a href="https://www.colleyville.com/government/city-charter" class="mega-heading">CITY CHARTER</a>
-              <a href="https://www.colleyville.com/government/city-council" class="mega-heading">CITY COUNCIL</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/government/city-council/mayor-city-council">Mayor & City Council</a></li>
-                <li><a href="https://www.colleyville.com/government/city-council/city-council-terms-and-requirements">City Council Terms and Requirements</a></li>
-                <li><a href="https://www.colleyville.com/government/city-council/city-council-meeting-calendar">City Council Meeting Calendar</a></li>
-              </ul>
-              <a href="https://www.colleyville.com/government/city-secretary" class="mega-heading">CITY SECRETARY</a>
-              <a href="https://www.colleyville.com/government/meeting-agendas-packets-and-minutes" class="mega-heading">MEETING AGENDAS, PACKETS, AND MINUTES</a>
-              <a href="https://www.colleyville.com/government/elections" class="mega-heading">ELECTIONS</a>
-              <a href="https://www.colleyville.com/government/financial-transparency" class="mega-heading">FINANCIAL TRANSPARENCY</a>
-              <a href="https://www.colleyville.com/government/departments-a-l/human-resources/job-opportunities" class="mega-heading">JOB OPPORTUNITIES</a>
-              <a href="https://www.colleyville.com/government/municipal-court" class="mega-heading">MUNICIPAL COURT</a>
-              <a href="https://www.colleyville.com/government/open-government-center" class="mega-heading">OPEN GOVERNMENT CENTER</a>
-              <a href="https://www.colleyville.com/government/public-meetings" class="mega-heading">PUBLIC MEETINGS</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/government/public-meetings/public-hearing-notices">Public Hearing Notices</a></li>
-                <li><a href="https://www.colleyville.com/government/public-meetings/state-of-the-city">State of the City</a></li>
-                <li><a href="https://www.colleyville.com/government/public-meetings/webcasts-and-live-streaming">Webcasts and Live Streaming</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/government/departments-a-l" class="mega-heading">DEPARTMENTS A-L</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/government/departments-a-l/animal-services">Animal Services</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/building-inspections">Building Inspections</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/city-manager">City Manager</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/city-secretary">City Secretary</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/code-enforcement">Code Enforcement</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/colleyville-center">Colleyville Center</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/communications-media-relations">Communications & Media Relations</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/community-development">Community Development</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/economic-development">Economic Development</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/emergency-management">Emergency Management</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/finance">Finance</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/fire-department">Fire Department</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/human-resources">Human Resources</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-a-l/library">Library</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/government/departments-m-z" class="mega-heading">DEPARTMENTS M-Z</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/government/departments-m-z/municipal-court">Municipal Court</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/parks">Parks</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/police-department">Police Department</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/public-works">Public Works</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/recreation">Recreation</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/senior-center">Senior Center</a></li>
-                <li><a href="https://www.colleyville.com/government/departments-m-z/utility-billing">Utility Billing</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <a href="https://www.colleyville.com/colleyville" class="nav-link"><span>ABOUT</span> COLLEYVILLE</a>
-        <div class="mega-menu">
-          <div class="container mega-grid">
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/colleyville/about-colleyville-quick-facts" class="mega-heading">ABOUT COLLEYVILLE QUICK FACTS</a>
-              <a href="https://www.colleyville.com/colleyville/city-calendar" class="mega-heading">CITY CALENDAR</a>
-              <a href="https://www.colleyville.com/colleyville/city-news" class="mega-heading">CITY NEWS</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/colleyville/demographics" class="mega-heading">DEMOGRAPHICS</a>
-              <a href="https://www.colleyville.com/colleyville/history-of-colleyville" class="mega-heading">HISTORY OF COLLEYVILLE</a>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/colleyville/heroes-park" class="mega-heading">HEROES PARK</a>
-              <ul class="mega-list">
-                <li><a href="https://www.colleyville.com/colleyville/heroes-park/heroes-park-nominations">Heroes Park Nominations</a></li>
-              </ul>
-            </div>
-            <div class="mega-col">
-              <a href="https://www.colleyville.com/colleyville/contact-us" class="mega-heading">CONTACT US</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div class="nav-item"><a class="nav-link" onclick="loadPage('generic', 'Business Hub')"><span>FOR</span> BUSINESS</a></div>
+      <div class="nav-item"><a class="nav-link" onclick="loadPage('generic', 'Government Hub')"><span>FOR</span> GOVERNMENT</a></div>
+      <div class="nav-item"><a class="nav-link" onclick="loadPage('generic', 'About Colleyville')"><span>ABOUT</span> COLLEYVILLE</a></div>
     </nav>
   </div>
 </header>
@@ -682,90 +298,30 @@
     <div class="utility-group font-size-controls">
       <span>Font Size:</span>
       <button onclick="document.body.style.fontSize='16px'">+</button>
-      <button onclick="document.body.style.fontSize='14px'">-</button>
+      <button onclick="document.body.style.fontSize='15px'">-</button>
     </div>
     <div class="utility-group">
-      <a href="#" class="utility-btn">⎘ Share & Bookmark</a>
-      <a href="mailto:?subject=City%20of%20Colleyville%20Services" class="utility-btn">✉ Email</a>
-      <a href="https://www.colleyville.com/colleyville/contact-us" class="utility-btn">💬 Feedback</a>
-      <a href="javascript:window.print()" class="utility-btn">⎙ Print</a>
+      <a href="#" class="utility-btn">⎙ Print</a>
     </div>
   </div>
 </div>
 
 <main class="container page-layout">
   
-  <aside class="sidebar">
+  <aside class="sidebar" id="app-sidebar">
     <div class="sidebar-header">Services</div>
     <ul class="sidebar-menu">
-      <li>
-        <a href="https://www.colleyville.com/services/i-want-to" class="active">I Want To...</a>
-        <ul class="sidebar-sub-menu">
-          <li><a href="https://www.colleyville.com/services/i-want-to/access-public-documents">Access Public Documents</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/activate-new-water-service">Activate new water service</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/apply-for-building-permit">Apply for Building Permit</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/make-a-payment">Make a payment</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/make-a-citizen-request">Make a citizen request</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/report-fraud-waste-abuse">Report Fraud, Waste & Abuse</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-enews">Sign Up for eNews</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-codered-emergency-notification">Sign up for CodeRED emergency notification</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/sign-up-for-no-knock-list">Sign up for No Knock List</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/watch-public-meetings">Watch Public Meetings</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/water-irrigation-system-evaluation">Water Irrigation System Evaluation</a></li>
-          <li><a href="https://www.colleyville.com/services/i-want-to/view-city-map">View City Map</a></li>
-        </ul>
-      </li>
-      <li><a href="https://www.colleyville.com/services/animal-services">Animal Services</a></li>
-      <li><a href="https://www.colleyville.com/services/garbage-collection-recycling">Garbage Collection & Recycling</a></li>
-      <li><a href="https://www.colleyville.com/services/new-water-service">New Water Service</a></li>
-      <li><a href="https://www.colleyville.com/services/public-safety">Public Safety</a></li>
-      <li><a href="https://www.colleyville.com/services/utilities-services">Utilities & Services</a></li>
-      <li><a href="https://www.colleyville.com/services/colleyville-center">Colleyville Center</a></li>
+      <li><a id="nav-services" onclick="loadPage('services')" class="active">All Services</a></li>
+      <li><a id="nav-animal-services" onclick="loadPage('animal-services')">Animal Services</a></li>
+      <li><a id="nav-garbage-recycling" onclick="loadPage('garbage-recycling')">Garbage Collection & Recycling</a></li>
+      <li><a id="nav-water" onclick="loadPage('generic', 'New Water Service')">New Water Service</a></li>
+      <li><a id="nav-safety" onclick="loadPage('generic', 'Public Safety')">Public Safety</a></li>
     </ul>
   </aside>
 
-  <div class="main-content">
-    <h1 class="page-title">Services</h1>
-    <p class="content-intro">Visit the links to the left to see the various services the City of Colleyville offers.</p>
-    
-    <div class="services-grid">
-      <a href="https://www.colleyville.com/services/i-want-to" class="service-card">
-        <h3>I Want To...</h3>
-        <p>Quick access to the most frequently requested civic services, payments, applications, and documents.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/animal-services" class="service-card">
-        <h3>Animal Services</h3>
-        <p>Pet registrations, lost & found pets, local ordinances, and wildlife management resources.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/garbage-collection-recycling" class="service-card">
-        <h3>Garbage Collection & Recycling</h3>
-        <p>View collection schedules, recycling programs, Colleyville Clean Sweep details, and household hazardous waste disposal.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/new-water-service" class="service-card">
-        <h3>New Water Service</h3>
-        <p>Start, stop, or transfer your residential or commercial water service with the city.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/public-safety" class="service-card">
-        <h3>Public Safety</h3>
-        <p>Information regarding Police, Fire, Emergency Management, and Code Enforcement services.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/utilities-services" class="service-card">
-        <h3>Utilities & Services</h3>
-        <p>Water billing portal, public works initiatives, and general utility information.</p>
-      </a>
-
-      <a href="https://www.colleyville.com/services/colleyville-center" class="service-card">
-        <h3>Colleyville Center</h3>
-        <p>Learn about facility rentals, community events, and programming at the Colleyville Center.</p>
-      </a>
+  <div class="main-content" id="app-content">
     </div>
 
-  </div>
 </main>
 
 <footer class="site-footer">
@@ -774,49 +330,124 @@
       <div class="footer-col">
         <div class="footer-logo">CITY OF<br>COLLEYVILLE</div>
         <div style="font-size: 13px; opacity: 0.8; line-height: 1.8;">
-          100 Main Street<br>
-          Colleyville, Texas 76034<br>
-          817-503-1000
+          100 Main Street<br>Colleyville, Texas 76034<br>817-503-1000
         </div>
       </div>
-      
       <div class="footer-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="https://www.colleyville.com/services">Services</a></li>
-          <li><a href="https://www.colleyville.com/residents">Residents</a></li>
-          <li><a href="https://www.colleyville.com/business">Business</a></li>
-          <li><a href="https://www.colleyville.com/government">Government</a></li>
-          <li><a href="https://www.colleyville.com/colleyville">About Colleyville</a></li>
+          <li><a onclick="loadPage('services')">Services</a></li>
+          <li><a onclick="loadPage('generic', 'Residents')">Residents</a></li>
         </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.colleyville.com/colleyville/contact-us">Contact Us</a></li>
-          <li><a href="https://www.colleyville.com/government/departments-a-l/human-resources/job-opportunities">Jobs</a></li>
-          <li><a href="https://www.colleyville.com/stay-in-touch">Stay in Touch</a></li>
-          <li><a href="https://www.colleyville.com/sitemap">Sitemap</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Social</h4>
-        <div style="display: flex; gap: 8px;">
-          <a href="https://www.facebook.com/ColleyvilleCity" class="social-fb" target="_blank" style="display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:4px; font-weight:bold;">f</a>
-          <a href="https://twitter.com/colleyvillecity" class="social-tw" target="_blank" style="display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:4px; font-weight:bold;">t</a>
-          <a href="https://www.instagram.com/cityofcolleyville/" class="social-ig" target="_blank" style="display:flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:4px; font-weight:bold;">ig</a>
-        </div>
       </div>
     </div>
-    
     <div class="footer-bottom">
-      <div>© 2026 City of Colleyville, TX. All Rights Reserved.</div>
-      <div>Website Design heavily inspired by Granicus - Connecting People and Government</div>
+      <div>© 2026 City of Colleyville, TX. Simulated Prototype.</div>
     </div>
   </div>
 </footer>
+
+<script>
+  // Content Database (Simulating multiple HTML pages)
+  const pages = {
+    'home': `
+      <h1 class="page-title">City of Colleyville</h1>
+      <p class="content-intro">Welcome to the official digital hub for the City of Colleyville. Please use the navigation above or the buttons below to find what you are looking for.</p>
+      <div class="services-grid">
+        <a onclick="loadPage('services')" class="service-card"><h3>Go to Services Hub ➔</h3></a>
+      </div>
+    `,
+    'services': `
+      <h1 class="page-title">Services</h1>
+      <p class="content-intro">Visit the links to the left to see the various services the City of Colleyville offers.</p>
+      <div class="services-grid">
+        <a onclick="loadPage('animal-services')" class="service-card">
+          <h3>Animal Services</h3>
+          <p>Pet registrations, lost & found pets, local ordinances, and wildlife management resources.</p>
+        </a>
+        <a onclick="loadPage('garbage-recycling')" class="service-card">
+          <h3>Garbage Collection & Recycling</h3>
+          <p>View collection schedules, recycling programs, Colleyville Clean Sweep details, and hazardous waste.</p>
+        </a>
+        <a onclick="loadPage('generic', 'New Water Service')" class="service-card">
+          <h3>New Water Service</h3>
+          <p>Start, stop, or transfer your residential or commercial water service with the city.</p>
+        </a>
+        <a onclick="loadPage('generic', 'Public Safety')" class="service-card">
+          <h3>Public Safety</h3>
+          <p>Information regarding Police, Fire, Emergency Management, and Code Enforcement services.</p>
+        </a>
+      </div>
+    `,
+    'animal-services': `
+      <h1 class="page-title">Animal Services</h1>
+      <div class="contact-box">
+        <strong>Animal Services Department</strong><br>
+        Phone: 817-503-1220<br>
+        Hours: Monday - Friday, 8:00 AM - 5:00 PM
+      </div>
+      <div class="content-block">
+        <h2>Pet Registration</h2>
+        <p>The City of Colleyville requires all dogs and cats over the age of four months to be registered with the city. Registration helps ensure pets are vaccinated against rabies and makes it easier to reunite lost pets with their owners.</p>
+        <p><strong>Fees:</strong><br>Spayed/Neutered: $10.00<br>Unaltered: $20.00</p>
+      </div>
+      <div class="content-block">
+        <h2>Lost and Found Pets</h2>
+        <p>If you have lost or found a pet, please contact Animal Services immediately. We maintain a log of all reported missing animals and strays picked up in the city limits.</p>
+      </div>
+    `,
+    'garbage-recycling': `
+      <h1 class="page-title">Garbage Collection & Recycling</h1>
+      <p class="content-intro">The City of Colleyville contracts with Community Waste Disposal (CWD) for residential and commercial solid waste and recycling services.</p>
+      <div class="content-block">
+        <h2>Collection Schedule</h2>
+        <p>Trash is collected twice a week, and recycling is collected once a week. Please ensure your carts are placed at the curb by 7:00 AM on your designated collection days.</p>
+      </div>
+      <div class="content-block">
+        <h2>Colleyville Clean Sweep</h2>
+        <p>Held twice a year (Spring and Fall), Clean Sweep is a free event for Colleyville residents to dispose of bulk items, brush, electronics, and household hazardous waste securely.</p>
+      </div>
+      <div class="contact-box">
+        <strong>CWD Customer Service</strong><br>
+        Phone: 972-392-9300 (Option 2)<br>
+        Email: customerservice@cwd.to
+      </div>
+    `
+  };
+
+  // Function to load content and update sidebar active states
+  function loadPage(pageId, dynamicTitle = null) {
+    const contentDiv = document.getElementById('app-content');
+    
+    // Update Content
+    if (pages[pageId]) {
+      contentDiv.innerHTML = pages[pageId];
+    } else {
+      // Generic fallback for pages not explicitly built in the JS database
+      contentDiv.innerHTML = \`
+        <h1 class="page-title">\${dynamicTitle}</h1>
+        <div class="contact-box" style="border-left-color: var(--brand-accent)">
+          <strong>Notice: Prototype Sandbox</strong><br>
+          You successfully navigated to \${dynamicTitle}! In a real production environment, the content for this specific department or tool would be loaded here. 
+        </div>
+        <p style="margin-top: 20px;"><a onclick="loadPage('services')" style="color:var(--brand-blue); cursor:pointer; text-decoration:underline;">← Return to Services Hub</a></p>
+      \`;
+    }
+
+    // Update Sidebar Active State
+    const allLinks = document.querySelectorAll('.sidebar-menu a');
+    allLinks.forEach(link => link.classList.remove('active'));
+    
+    const activeLink = document.getElementById('nav-' + pageId);
+    if (activeLink) activeLink.classList.add('active');
+
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Initialize page on load
+  window.onload = () => loadPage('services');
+</script>
 
 </body>
 </html>
